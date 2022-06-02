@@ -1,0 +1,15 @@
+syntax = "proto3";
+package sentence;
+
+message Sentence {
+  string sentence = 1;
+}
+
+message SplitSentenceRequest {
+  string paragraph = 1;
+  uint32 language = 2;
+}
+
+message SplitSentenceResult {
+  repeated Sentence sentences = 1;
+}

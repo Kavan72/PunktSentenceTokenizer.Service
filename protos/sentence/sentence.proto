@@ -1,0 +1,6 @@
+syntax = "proto3";
+import "sentence_service.proto";
+
+service Sentence {
+  rpc Split (sentence.SplitSentenceRequest) returns (sentence.SplitSentenceResult);
+}
