@@ -1,13 +1,33 @@
 syntax = "proto3";
 package sentence;
 
+enum Language {
+  CZECH = 0;
+  DANISH = 1;
+  DUTCH = 2;
+  ENGLISH = 3;
+  ESTONIAN = 4;
+  FINNISH = 5;
+  FRENCH = 6;
+  GERMAN = 7;
+  GREEK = 8;
+  ITALIAN = 9;
+  NORWEGIAN = 10;
+  POLISH = 11;
+  PORTUGUESE = 12;
+  SLOVENE = 13;
+  SPANISH = 14;
+  SWEDISH = 15;
+  TURKISH = 16;
+}
+
 message Sentence {
   string sentence = 1;
 }
 
 message SplitSentenceRequest {
   string paragraph = 1;
-  uint32 language = 2;
+  Language language = 2;
 }
 
 message SplitSentenceResult {
